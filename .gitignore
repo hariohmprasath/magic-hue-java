@@ -1,0 +1,13 @@
+
+.idea/checkstyle-idea.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/codeStyles/Project.xml
+.idea/compiler.xml
+.idea/jarRepositories.xml
+.idea/misc.xml
+magic-hue-java.iml
+target/classes/com/magic/hue/data/LightStatusDetails.class
+target/classes/com/magic/hue/data/Status.class
+target/classes/com/magic/hue/MagicHueConstants.class
+target/classes/com/magic/hue/MagicHueHelper.class
+target/test-classes/com/magic/hue/TestMagicHueHelper.class
