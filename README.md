@@ -16,6 +16,7 @@ This program supports various controlling aspects of this Wifi enabled LED light
 * Govee Smart Wifi LED Magic hue - <a href="https://www.amazon.com/Govee-Brighter-Million-Controlled-Kitchen/dp/B07N1CMGQQ/ref=sr_1_1?dchild=1&keywords=magic+hue+led&qid=1597272104&s=home-garden&sr=1-1"> Click here </a>
 
 ## Implementation
+<i><u><b>Note:</b></u> Code implementation can found inside "MagicHeuHelper.java"</i>
 * Java sockets are used to connect send request to the IP address assinged to these LED lights
 * Here are the HEX codes sent across for each operations:
 <br><big>1. Turn On - </big><i>71:23:0f</i>
@@ -24,7 +25,7 @@ This program supports various controlling aspects of this Wifi enabled LED light
 <br><big>4. Set Warm - </big><i> 31:00:00:00:<b>Warm_value</b>:0f:0f </i>
 <br><big>5. Set Cold - </big><i> 31:00:00:00:00:<b>Cold_value</b>:0f </i>
 <br><big>6. Get Status - </big><i> 81:8a:8b:96</i>
-<br><br><i><u><b>Note:</b></u> Code implementation can found inside "MagicHeuHelper.java"</i>
+
 
 ## Usage
 <big>1. Turn On</big> - <i>MagicHueHelper.turnOn(IP_ADDRESS);</i>
