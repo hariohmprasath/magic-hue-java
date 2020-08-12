@@ -1,7 +1,7 @@
 # Home automation with Nexlux LED & MagicHue lights in JAVA
 This program supports various controlling aspects of this Wifi enabled LED lights.
 
-##Supported operations
+## Supported operations
 <big>1. Turn On </big>
 <br><big>2. Turn Off</big>
 <br><big>3. Set color (RGB) - </big><i>Ex: 100,100,100</i>
