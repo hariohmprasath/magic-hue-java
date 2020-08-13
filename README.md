@@ -83,8 +83,7 @@ This program supports various controlling aspects of this Wifi enabled LED light
 <i><u><b>Note:</b></u> Code implementation can found inside "MagicHeuHelper.java"</i>
 
 ## Maven
-<code>&lt;repository&gt;<br>
-  &nbsp;&nbsp;&nbsp;&lt;id>repsy&lt;/id&gt;<br>
+<code>&lt;repository&gt;<br>&nbsp;&nbsp;&nbsp;&lt;id>repsy&lt;/id&gt;<br>
   &nbsp;&nbsp;&nbsp;&lt;name&gt;repsy&lt;/name&gt;<br>
   &nbsp;&nbsp;&nbsp;&lt;url&gt;https:\//repo.repsy.io/mvn/hariohmprasath/magic-hue&lt;/url&gt;
 &lt;/repository&gt;
