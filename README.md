@@ -2,12 +2,40 @@
 This program supports various controlling aspects of this Wifi enabled LED lights.
 
 ##Supported operations
-<big>1. Turn On </big>
-<br><big>2. Turn Off</big>
-<br><big>3. Set color (RGB) - </big><i>Ex: 100,100,100</i>
-<br><big>4. Set Warm - </big><i>Ex: 150</i>
-<br><big>5. Set Cool - </big><i>Ex: 150</i>
-<br><big>6. Get Status - </big><i>Sample output: {status=OFF, rgb=0,0,0, warm=0}</i>
+<table>
+<thead>
+<tr>
+<th>Operations</th>
+<th>Sample values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Turn On</td>
+<td></td>
+</tr>
+<tr>
+<td>Turn Off</td>
+<td></td>
+</tr>
+<tr>
+<td>Set color (RGB)</td>
+<td><code>100,100,100</code></td>
+</tr>
+<tr>
+<td>Set Warm</td>
+<td><code>150</code></td>
+</tr>
+<tr>
+<td>Set Cool</td>
+<td><code>200</code></td>
+</tr>
+<tr>
+<td>Get Status</td>
+<td>Output: <code>{status=OFF, rgb=0,0,0, warm=0}</code></td>
+</tr>
+</tbody>
+</table>
 
 <i><b><u>Note:</u></b> IP address of the LED light is passed in as an argument for all these operations. </i>
 
@@ -18,21 +46,92 @@ This program supports various controlling aspects of this Wifi enabled LED light
 ## Implementation
 * Java sockets are used to connect send request to the IP address assinged to these LED lights
 * Here are the HEX codes sent across for each operations:
-<br><big>1. Turn On - </big><i>71:23:0f</i>
-<br><big>2. Turn Off - </big><i>71:24:0f</i>
-<br><big>3. Set Color - </big><i> RGB converted to hex </i>
-<br><big>4. Set Warm - </big><i> 31:00:00:00:<b>Warm_value</b>:0f:0f </i>
-<br><big>5. Set Cold - </big><i> 31:00:00:00:00:<b>Cold_value</b>:0f </i>
-<br><big>6. Get Status - </big><i> 81:8a:8b:96</i>
-<br><br><i><u><b>Note:</b></u> Code implementation can found inside "MagicHeuHelper.java"</i>
+<table>
+<thead>
+<tr>
+<th>Operations</th>
+<th>Hex values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Turn On</td>
+<td><code>71:23:0f</code></td>
+</tr>
+<tr>
+<td>Turn Off</td>
+<td><code>71:24:0f</code></td>
+</tr>
+<tr>
+<td>Set color (RGB)</td>
+<td><code>RGB converted to hex</code></td>
+</tr>
+<tr>
+<td>Set Warm</td>
+<td><code>31:00:00:00:<b>Warm_value</b>:0f:0f</code></td>
+</tr>
+<tr>
+<td>Set Cool</td>
+<td><code>31:00:00:00:00:<b>Cold_value</b>:0f</code></td>
+</tr>
+<tr>
+<td>Get Status</td>
+<td><code>81:8a:8b:96</code></td>
+</tr>
+</tbody>
+</table>
+<i><u><b>Note:</b></u> Code implementation can found inside "MagicHeuHelper.java"</i>
 
-## Usage
-<big>1. Turn On</big> - <i>MagicHueHelper.turnOn(IP_ADDRESS);</i>
-<br><big>2. Turn Off - </big><i>MagicHueHelper.turnOff(IP_ADDRESS);</i>
-<br><big>3. Set Color - </big><i>MagicHueHelper.setRgb(IP_ADDRESS, "100,100,100");</i>
-<br><big>4. Set Warm - </big><i>MagicHueHelper.setWarm(IP_ADDRESS, "150");</i>
-<br><big>5. Set Cold - </big><i>MagicHueHelper.setCool(IP_ADDRESS, "150");</i>
-<br><big>6. Get Status - </big><i>MagicHueHelper.getStatus(IP_ADDRESS)</i>
+## Maven
+<code>&lt;repository&gt;<br>
+  &nbsp;&nbsp;&nbsp;&lt;id>repsy&lt;/id&gt;<br>
+  &nbsp;&nbsp;&nbsp;&lt;name&gt;repsy&lt;/name&gt;<br>
+  &nbsp;&nbsp;&nbsp;&lt;url&gt;https:\//repo.repsy.io/mvn/hariohmprasath/magic-hue&lt;/url&gt;
+&lt;/repository&gt;
+</code>
+
+<code>&lt;dependency&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.home&lt;/groupId&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;magic-hue-java&lt;/artifactId&gt;<br>
+&nbsp;&nbsp;&nbsp;&lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;<br>
+&lt;/dependency&gt;
+</code>
+    
+## Code snippets
+<table>
+<thead>
+<tr>
+<th>Operations</th>
+<th>Hex values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Turn On</td>
+<td><code>MagicHueHelper.turnOn(IP_ADDRESS)</code></td>
+</tr>
+<tr>
+<td>Turn Off</td>
+<td><code>MagicHueHelper.turnOff(IP_ADDRESS)</code></td>
+</tr>
+<tr>
+<td>Set color (RGB)</td>
+<td><code>MagicHueHelper.setRgb(IP_ADDRESS, "100,100,100")</code></td>
+</tr>
+<tr>
+<td>Set Warm</td>
+<td><code>MagicHueHelper.setWarm(IP_ADDRESS, "150")</code></td>
+</tr>
+<tr>
+<td>Set Cool</td>
+<td><code>MagicHueHelper.setCool(IP_ADDRESS, "200")</code></td>
+</tr>
+<tr>
+<td>Get Status</td>
+<td><code>MagicHueHelper.getStatus(IP_ADDRESS)</code></td>
+</tr>
+</tbody>
+</table>
 
 ## Credits
 Thanks to excellent documentation by @kirillsimin part of his contribution in (https://github.com/kirillsimin/magichue). I was able to create a java version for this.
